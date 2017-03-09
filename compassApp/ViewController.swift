@@ -27,7 +27,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        // コンパスの値を表示
         compassTF.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
+        // imageView回転コード
+        let rt = CGFloat(2*M_PI*newHeading.magneticHeading/360.0)
+        imageView.transform = CGAffineTransform(rotationAngle: rt)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -50,8 +54,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
             
             locationManager.startUpdatingHeading()
             
+            // キーボードのデリゲート処理
             compassTF.delegate = self
             compassTF.returnKeyType = .done
+            
+            let myImage = UIImage(named: "にゃんちゅう.jpg")
+            imageView.image = myImage
+            
         }
     }
     
