@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		605892A61E712C8400AFDFEA /* にゃんちゅう.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 605892A51E712C8400AFDFEA /* にゃんちゅう.jpg */; };
 		60A81C941E70D47D00FA732E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A81C931E70D47D00FA732E /* AppDelegate.swift */; };
 		60A81C961E70D47D00FA732E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A81C951E70D47D00FA732E /* ViewController.swift */; };
 		60A81C991E70D47D00FA732E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A81C971E70D47D00FA732E /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		60A81CA91E70D47D00FA732E /* compassAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A81CA81E70D47D00FA732E /* compassAppTests.swift */; };
 		60A81CB41E70D47D00FA732E /* compassAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A81CB31E70D47D00FA732E /* compassAppUITests.swift */; };
 		60A81CC31E70D50E00FA732E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A81CC21E70D50E00FA732E /* CoreLocation.framework */; };
-		60A81CC51E70E91E00FA732E /* にゃんちゅう.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A81CC41E70E91E00FA732E /* にゃんちゅう.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		605892A51E712C8400AFDFEA /* にゃんちゅう.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "にゃんちゅう.jpg"; sourceTree = "<group>"; };
 		60A81C901E70D47D00FA732E /* compassApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = compassApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A81C931E70D47D00FA732E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A81C951E70D47D00FA732E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		60A81CB31E70D47D00FA732E /* compassAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compassAppUITests.swift; sourceTree = "<group>"; };
 		60A81CB51E70D47D00FA732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A81CC21E70D50E00FA732E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		60A81CC41E70E91E00FA732E /* にゃんちゅう.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "にゃんちゅう.jpg"; path = "../../photoCatelogPicture/にゃんちゅう.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				60A81C931E70D47D00FA732E /* AppDelegate.swift */,
 				60A81C951E70D47D00FA732E /* ViewController.swift */,
 				60A81C971E70D47D00FA732E /* Main.storyboard */,
-				60A81CC41E70E91E00FA732E /* にゃんちゅう.jpg */,
+				605892A51E712C8400AFDFEA /* にゃんちゅう.jpg */,
 				60A81C9A1E70D47D00FA732E /* Assets.xcassets */,
 				60A81C9C1E70D47D00FA732E /* LaunchScreen.storyboard */,
 				60A81C9F1E70D47D00FA732E /* Info.plist */,
@@ -252,7 +252,7 @@
 			files = (
 				60A81C9E1E70D47D00FA732E /* LaunchScreen.storyboard in Resources */,
 				60A81C9B1E70D47D00FA732E /* Assets.xcassets in Resources */,
-				60A81CC51E70E91E00FA732E /* にゃんちゅう.jpg in Resources */,
+				605892A61E712C8400AFDFEA /* にゃんちゅう.jpg in Resources */,
 				60A81C991E70D47D00FA732E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +532,7 @@
 				60A81CBA1E70D47D00FA732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60A81CBB1E70D47D00FA732E /* Build configuration list for PBXNativeTarget "compassAppTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +541,7 @@
 				60A81CBD1E70D47D00FA732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60A81CBE1E70D47D00FA732E /* Build configuration list for PBXNativeTarget "compassAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +550,7 @@
 				60A81CC01E70D47D00FA732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
