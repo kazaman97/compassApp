@@ -9,11 +9,14 @@
 import UIKit
 import CoreLocation
 
+@available(iOS 10.0, *)
 class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var compassTF: UITextField!
     
     var locationManager: CLLocationManager!
+    let generator = UIImpactFeedbackGenerator(style: .medium)
+    
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -31,7 +34,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
         compassTF.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
         // imageView回転コード
         let rt = CGFloat(2*M_PI*newHeading.magneticHeading/360.0)
+        print(newHeading.magneticHeading)
         imageView.transform = CGAffineTransform(rotationAngle: rt)
+        if newHeading.magneticHeading >= 0.0 && newHeading.magneticHeading < 0.2 {
+            generator.impactOccurred()
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -58,9 +65,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
             compassTF.delegate = self
             compassTF.returnKeyType = .done
             
+            // イメージ画像の読み込み
             let myImage = UIImage(named: "にゃんちゅう.jpg")
             imageView.image = myImage
             
+            // 触覚フィードバック準備
+            generator.prepare()
         }
     }
     
