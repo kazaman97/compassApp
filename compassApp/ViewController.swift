@@ -12,7 +12,7 @@ import CoreLocation
 @available(iOS 10.0, *)
 class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var compassTF: UITextField!
+    @IBOutlet weak var compassLabel: UILabel!
     
     var locationManager: CLLocationManager!
     let generator = UIImpactFeedbackGenerator(style: .medium)
@@ -31,19 +31,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         // コンパスの値を表示
-        compassTF.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
+        compassLabel.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
         // imageView回転コード
         let rt = CGFloat(2*M_PI*newHeading.magneticHeading/360.0)
-        print(newHeading.magneticHeading)
         imageView.transform = CGAffineTransform(rotationAngle: rt)
         if newHeading.magneticHeading >= 0.0 && newHeading.magneticHeading < 0.2 {
             generator.impactOccurred()
         }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        compassTF.resignFirstResponder()
-        return true
     }
 
     override func viewDidLoad() {
@@ -60,10 +54,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
             locationManager.headingOrientation = .portrait
             
             locationManager.startUpdatingHeading()
-            
-            // キーボードのデリゲート処理
-            compassTF.delegate = self
-            compassTF.returnKeyType = .done
             
             // イメージ画像の読み込み
             let myImage = UIImage(named: "にゃんちゅう.jpg")

@@ -28,26 +28,26 @@
                                     <constraint firstAttribute="width" constant="200" id="RnG-Gl-7JQ"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compass" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13c-Yc-Ty9">
-                                <rect key="frame" x="87" y="425" width="200" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-8i-ExB">
+                                <rect key="frame" x="87" y="470" width="200" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="EeO-ka-xzH"/>
+                                    <constraint firstAttribute="width" constant="200" id="SI3-RC-Les"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="49r-ls-vnv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AbO-z7-rYq"/>
-                            <constraint firstItem="13c-Yc-Ty9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D1q-mN-5tS"/>
-                            <constraint firstItem="13c-Yc-Ty9" firstAttribute="top" secondItem="49r-ls-vnv" secondAttribute="bottom" constant="105" id="JRh-z9-TfK"/>
+                            <constraint firstItem="Ymr-8i-ExB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RLf-1G-KLN"/>
                             <constraint firstItem="49r-ls-vnv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="deo-6t-s1a"/>
+                            <constraint firstItem="Ymr-8i-ExB" firstAttribute="top" secondItem="49r-ls-vnv" secondAttribute="bottom" constant="150" id="hNk-1q-SCh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="compassTF" destination="13c-Yc-Ty9" id="Bg6-KI-X72"/>
+                        <outlet property="compassLabel" destination="Ymr-8i-ExB" id="lLd-Fm-ejq"/>
                         <outlet property="imageView" destination="49r-ls-vnv" id="LfG-Fn-Dxw"/>
                     </connections>
                 </viewController>
