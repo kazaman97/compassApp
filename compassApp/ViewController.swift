@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var compassLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
